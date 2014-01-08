@@ -37,6 +37,8 @@ LfProjectGenerator.prototype.askFor = function askFor() {
 LfProjectGenerator.prototype.app = function app() {
   this.mkdir('bin');
   this.mkdir('src');
+  this.mkdir('src/styles');
+  this.mkdir('dist');
   this.mkdir('tests');
 
   this.copy('_package.json', 'package.json');
