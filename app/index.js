@@ -44,18 +44,11 @@ LfProjectGenerator.prototype.askFor = function askFor() {
 LfProjectGenerator.prototype.app = function app() {
   this.mkdir('bin');
   this.copy('server.js', 'bin/server.js');
-  this.copy('test', 'bin/test');
 
-  this.mkdir('tests');
   this.mkdir('sample');
 
   this.mkdir('dev');
   this.mkdir('dev/css');
-  // this.mkdir('dev/fonts');
-  // this.copy('fycons.eot', 'dev/fonts/fycons.eot');
-  // this.copy('fycons.svg', 'dev/fonts/fycons.svg');
-  // this.copy('fycons.ttf', 'dev/fonts/fycons.ttf');
-  // this.copty('fycons.woff', 'dev/fonts/fycons.woff');
 };
 
 
@@ -76,4 +69,15 @@ LfProjectGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('_jshintrc', '.jshintrc');
   this.copy('_gitignore', '.gitignore');
   this.template('_README.md', 'README.md');
+  this.template('_requirejs.conf.js', 'requirejs.conf.js');
+};
+
+LfProjectGenerator.prototype.testFiles = function testFiles() {
+  this.mkdir('tests');
+  this.mkdir('tests/fixtures');
+  this.mkdir('tests/spec');
+    
+  this.copy('tests-main.js', 'tests/tests-main.js');
+  this.copy('runner.html', 'tests/runner.html');
+  this.template('_test.html', 'sample/test.html');
 };
