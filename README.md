@@ -25,6 +25,7 @@ Yeoman travels light. He didn't pack any generators when he moved in. You can th
 
 To install generator-lf-project from github:
 ```
+$ cd ~/dev
 $ git clone git@github.com:Livefyre/generator-lf-project.git
 $ cd generator-lf-project
 $ npm link
