@@ -14,7 +14,7 @@ require.config({
   packages: [
     {
       name: '<%= _.slugify(name) %>',
-      location: 'src/javascript'
+      location: 'src/js'
     },{
       name: 'fixtures',
       location: 'test/fixtures'
