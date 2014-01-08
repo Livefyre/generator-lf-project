@@ -23,14 +23,12 @@ LfProjectGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
+    name: 'projectName',
+    message: 'What is the project name?',
   }];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+    this.projectName = props.projectName;
 
     cb();
   }.bind(this));
@@ -43,6 +41,11 @@ LfProjectGenerator.prototype.app = function app() {
 
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
+  this.copy('_bowerrc', '.bowerrc');
+  this.copy('_jshint', '.jshint');
+  this.copy('_gitignore', '.gitignore');
+  this.copy('server.js', 'bin/server.js');
+  this.copy('test', 'bin/test');
 };
 
 LfProjectGenerator.prototype.projectfiles = function projectfiles() {
