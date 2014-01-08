@@ -22,13 +22,20 @@ LfProjectGenerator.prototype.askFor = function askFor() {
   // have Yeoman greet the user.
   console.log(this.yeoman);
 
-  var prompts = [{
-    name: 'projectName',
-    message: 'What is the project name?',
-  }];
+  var prompts = [
+    {
+      name: 'name'
+      , message: 'What is the project name?'
+    }
+    , {
+      name: 'desc'
+      , message: 'Describe the project:'
+    }
+  ];
 
   this.prompt(prompts, function (props) {
-    this.projectName = props.projectName;
+    this.name = props.name;
+    this.desc = props.desc;
 
     cb();
   }.bind(this));
@@ -36,21 +43,37 @@ LfProjectGenerator.prototype.askFor = function askFor() {
 
 LfProjectGenerator.prototype.app = function app() {
   this.mkdir('bin');
-  this.mkdir('src');
-  this.mkdir('src/styles');
-  this.mkdir('dist');
-  this.mkdir('tests');
-
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
-  this.copy('_bowerrc', '.bowerrc');
-  this.copy('_jshint', '.jshint');
-  this.copy('_gitignore', '.gitignore');
   this.copy('server.js', 'bin/server.js');
   this.copy('test', 'bin/test');
+
+  this.mkdir('tests');
+  this.mkdir('sample');
+
+  this.mkdir('dev');
+  this.mkdir('dev/css');
+  // this.mkdir('dev/fonts');
+  // this.copy('fycons.eot', 'dev/fonts/fycons.eot');
+  // this.copy('fycons.svg', 'dev/fonts/fycons.svg');
+  // this.copy('fycons.ttf', 'dev/fonts/fycons.ttf');
+  // this.copty('fycons.woff', 'dev/fonts/fycons.woff');
+};
+
+
+LfProjectGenerator.prototype.srcFiles = function srcFiles() {
+  this.mkdir('src');
+  this.mkdir('src/images');
+  this.mkdir('src/js');
+  this.mkdir('src/less');
+  this.copy('main.less', 'src/less/main.less');
+  this.copy('mixins.less', 'src/less/mixins.less');
+  this.mkdir('src/templates');
 };
 
 LfProjectGenerator.prototype.projectfiles = function projectfiles() {
-  this.copy('editorconfig', '.editorconfig');
-  this.copy('jshintrc', '.jshintrc');
+  this.copy('_package.json', 'package.json');
+  this.copy('_bower.json', 'bower.json');
+  this.copy('_bowerrc', '.bowerrc');
+  this.copy('_jshintrc', '.jshintrc');
+  this.copy('_gitignore', '.gitignore');
+  this.template('_README.md', 'README.md');
 };

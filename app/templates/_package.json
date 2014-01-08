@@ -1,26 +1,44 @@
 {
-  "name": "<%= _.slugify(projectName) %>",
+  "name": "<%= _.slugify(name) %>",
+  "description": "<%= desc %>",
   "version": "0.0.0",
   "author": "Livefyre <support@livefyre.com>",
+  "contributors": [
+      { "name": "Chris Richards",
+	"email": "crichards@livefyre.com"
+      }
+  ],
+  "dependencies": {
+    "bower": "*",
+    "mocha-phantomjs": "3.1.6",
+    "phantomjs": "1.9.2-2"
+  },
+  "devDependencies": {
+    "bower": "1.0.0",
+    "express": "~3.4.7",
+    "jshint": "~1.1.0",
+    "jsdoc": "git://github.com/jsdoc3/jsdoc.git",
+    "mocha-phantomjs": "~3",
+    "less-middleware": "*",
+    "mocha": "*",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.0",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-junit-reporter": "~0.1.0",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-cajon": "*",
+    "karma-phantomjs-launcher": "~0.1.0",
+    "karma": "~0.10.5",
+    "karma-mocha": "~0.1.0",
+    "karma-safari-launcher": "~0.1.1",
+    "karma-chai": "0.0.2",
+    "karma-coverage": "~0.1"
+  },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
     "start": "./bin/server.js",
     "test": "./bin/test",
     "hint": "./node_modules/jshint/bin/jshint src; echo",
-    "lessc": "./node_modules/less/bin/lessc --include-path=lib/ src/styles/all.less dist/styles/all.css",
-    "jsdoc": "rm -rf docs/api && ./node_modules/jsdoc/jsdoc -c tools/jsdoc.conf.json",
-    "build": "mkdir -p dist && ./node_modules/less/bin/lessc src/styles/all.less > dist/lf.css",
-    "build-docs": "cd ./demos/docs/ && jekyll build"
-  },
-  "devDependencies": {
-    "bower": "1.0.0",
-    "jshint": "~1.1.0",
-    "jsdoc": "git://github.com/jsdoc3/jsdoc.git",
-    "mocha-phantomjs": "~3",
-    "less": "~1.5.0",
-    "portfinder": "~0.2.1",
-    "express": "~3.4.7",
-    "less-middleware": "~0.1.14",
-    "http-server": "~0.6"
+    "jsdoc": "rm -rf docs/api && ./node_modules/jsdoc/jsdoc -c tools/jsdoc.conf.json"
   }
 }

@@ -6,17 +6,17 @@
   ],
   "dependencies": {
     "bootstrap": "~3.0.3",
-    "sinon-chai": "~2.4.0",
-    "sinonjs": "~1.7.3",
-    "view": "https://github.com/Livefyre/view.git#~1.0",
-    "event-emitter": "git@github.com:Livefyre/event-emitter.git"
+    "cajon": "git@github.com:requirejs/cajon.git#~0.1.11",
+    "jquery": "~1.10.2",
+    "less": "1.5.0",
+    "livefyre-bootstrap": "git@github.com:Livefyre/livefyre-bootstrap.git",
+    "mustache": "*"
   },
   "devDependencies": {
-    "cajon": "git@github.com:requirejs/cajon.git#~0.1.11",
     "chai": "~1.8.1",
-    "less.js": "~1.5.1",
-    "require-css": "~0.1.1",
-    "mocha": "~1.16.2"
+    "sinon-chai": "~2.4.0",
+    "sinonjs": "~1.7.3",
+    "chai-jquery": "~1.1.2"
   }
 }
 
