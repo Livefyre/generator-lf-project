@@ -4,6 +4,8 @@ require.config({
     chai: 'lib/chai/chai',
     'chai-jquery': 'lib/chai-jquery/chai-jquery',
     jquery: 'lib/jquery/jquery',
+    lodash: 'lib/lodash/dist/lodash',
+    backbone: 'lib/backbone/backbone',
     mustache: 'lib/mustache/mustache',
     text: 'lib/requirejs-text/text',
     sinon: 'lib/sinonjs/sinon',
@@ -52,6 +54,10 @@ require.config({
     },
     lodash: {
       exports: '_'
+    },
+    backbone: {
+      deps: ['jquery', 'lodash']
+      , exports: 'Backbone'
     },
     'sinon': {
       exports: 'sinon'
