@@ -50,6 +50,9 @@ require.config({
     jquery: {
       exports: '$'
     },
+    lodash: {
+      exports: '_'
+    },
     'sinon': {
       exports: 'sinon'
     }

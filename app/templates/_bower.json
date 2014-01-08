@@ -8,6 +8,7 @@
     "bootstrap": "~3.0.3",
     "cajon": "git@github.com:requirejs/cajon.git#~0.1.11",
     "jquery": "~1.10.2",
+    "lodash": "~2.4.1",
     "less": "1.5.0",
     "livefyre-bootstrap": "git@github.com:Livefyre/livefyre-bootstrap.git",
     "mustache": "*"
