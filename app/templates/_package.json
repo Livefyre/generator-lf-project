@@ -1,0 +1,25 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "author": "Livefyre <support@livefyre.com>",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "start": "./bin/server.js",
+    "test": "./bin/test",
+    "hint": "./node_modules/jshint/bin/jshint src; echo",
+    "lessc": "./node_modules/less/bin/lessc --include-path=lib/ src/styles/all.less dist/styles/all.css",
+    "jsdoc": "rm -rf docs/api && ./node_modules/jsdoc/jsdoc -c tools/jsdoc.conf.json",
+    "build": "mkdir -p dist && ./node_modules/less/bin/lessc src/styles/all.less > dist/lf.css",
+    "build-docs": "cd ./demos/docs/ && jekyll build"
+  },
+  "devDependencies": {
+    "bower": "1.0.0",
+    "jshint": "~1.1.0",
+    "jsdoc": "git://github.com/jsdoc3/jsdoc.git",
+    "mocha-phantomjs": "~3",
+    "less": "~1.5.0",
+    "portfinder": "~0.2.1",
+    "express": "~3.4.7",
+    "less-middleware": "~0.1.14"
+  }
+}
