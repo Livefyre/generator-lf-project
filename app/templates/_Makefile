@@ -1,0 +1,35 @@
+.PHONY: all build
+
+all: build
+
+build: node_modules
+
+# if package.json changes, install
+node_modules: package.json
+	npm install
+	touch $@
+
+test: build
+	npm test
+
+testw: build
+	npm run testw
+
+clean:
+	rm -rf node_modules
+
+package: build
+
+run: build
+	npm start
+
+debug: build
+	$(MAKE) -j 2 _debug
+
+_debug: _testbrk _nodedebug
+
+_testbrk:
+	npm run testbrk
+
+_nodedebug:
+	node-debug 2>&1 > /dev/null
