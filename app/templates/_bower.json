@@ -25,5 +25,11 @@
     "sinonjs": "1.7.3",
     "chai-jquery": "1.1.2"
   },
+  "resolutions": {
+    "view": "~1.1",
+    "requirejs": "~2.1.5",
+    "moment": "~2.5.0",
+    "requirejs-hogan-plugin": "0.3.1"
+  }
 }
 
