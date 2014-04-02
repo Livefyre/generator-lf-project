@@ -5,20 +5,25 @@
     "./src/main.js"
   ],
   "dependencies": {
-    "bootstrap": "~3.0.3",
+    "bootstrap": "3.0.3",
     "cajon": "git@github.com:requirejs/cajon.git#~0.1.11",
-    "jquery": "~1.10.2",
-    "lodash": "~2.4.1",
-    "backbone": "~1.1.0", 
+    "jquery": "1.10.2",
+    "lodash": "2.4.1",
+    "backbone": "1.1.1",
     "less": "1.5.0",
     "livefyre-bootstrap": "git@github.com:Livefyre/livefyre-bootstrap.git",
-    "mustache": "*"
+    "collection-manager": "git@github.com:Livefyre/collection-manager.git",
+    "require-css": "0.1.2",
+    "requirejs-i18n": "2.0.4",
+    "requirejs-handlebars": "git@github.com:jfparadis/requirejs-handlebars.git",
+    "handlebars": "1.3.0",
+    "requirejs-text": "2.0.10"
   },
   "devDependencies": {
-    "chai": "~1.8.1",
-    "sinon-chai": "~2.4.0",
-    "sinonjs": "~1.7.3",
-    "chai-jquery": "~1.1.2"
-  }
+    "chai": "1.8.1",
+    "sinon-chai": "2.4.0",
+    "sinonjs": "1.7.3",
+    "chai-jquery": "1.1.2"
+  },
 }
 
