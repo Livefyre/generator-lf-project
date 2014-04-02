@@ -62,6 +62,7 @@ LfProjectGenerator.prototype.srcFiles = function srcFiles() {
   this.copy('main.less', 'src/less/main.less');
   this.copy('mixins.less', 'src/less/mixins.less');
 
+  this.copy('_main-view.js', 'src/js/main-view.js');
   this.copy('polyfill.js', 'src/js/polyfill.js');
 };
 
@@ -92,6 +93,6 @@ LfProjectGenerator.prototype.nlsFiles = function nlsFiles() {
 
 LfProjectGenerator.prototype.sampleFiles = function sampleFiles() {
   this.mkdir('sample');
-  this.template('_test.html', 'sample/sample.html');
-  this.copy('main.js', 'sample/main.js');
+  this.template('_sample.html', 'sample/sample.html');
+  this.copy('sample-main.js', 'sample/sample-main.js');
 };

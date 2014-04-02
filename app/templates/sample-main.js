@@ -3,6 +3,7 @@ require([
   'jquery'
   , 'lodash'
   , 'backbone'
+  , 'src/js/main-view'
   , 'livefyre-bootstrap'
   , 'nls/i18n'
   , 'src/js/polyfill'
@@ -13,8 +14,11 @@ require([
   $
   , _
   , Backbone
+  , MainView
   , lfBootstrap
 ) {
 
-  console.log('Everything looks good!');
+  var main = new MainView({
+    el: $('#content')
+  });
 });

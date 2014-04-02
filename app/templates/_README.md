@@ -4,8 +4,10 @@
 
 ## Local dev
 
-Install deps: ```npm install```
+Install deps: ```make```
 
-Start dev server: ```npm start```
+Start dev server: ```make run```
 
-Run tests: ```npm test```
+Lint: ```make lint```
+
+Run tests: ```make test``` or ```make testw```
