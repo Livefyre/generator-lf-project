@@ -3,6 +3,7 @@
 all: build
 
 build: node_modules
+	chmod a+x bin/server.js
 
 # if package.json changes, install
 node_modules: package.json
@@ -21,18 +22,7 @@ clean:
 package: build
 
 run: build
-	npm start
+	bin/server.js
 
 lint: build
 	./node_modules/jshint/bin/jshint src/js
-
-debug: build
-	$(MAKE) -j 2 _debug
-
-_debug: _testbrk _nodedebug
-
-_testbrk:
-	npm run testbrk
-
-_nodedebug:
-	node-debug 2>&1 > /dev/null

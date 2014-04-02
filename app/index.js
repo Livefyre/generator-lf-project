@@ -42,9 +42,9 @@ LfProjectGenerator.prototype.askFor = function askFor() {
 };
 
 LfProjectGenerator.prototype.app = function app() {
-  this.copy('_MakeFile', 'Makefile');
+  this.copy('MakeFile', 'Makefile');
   this.mkdir('bin');
-  this.template('server.js', 'bin/server.js');
+  this.template('_server.js', 'bin/server.js');
 
   this.mkdir('sample');
 

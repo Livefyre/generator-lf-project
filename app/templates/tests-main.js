@@ -1,7 +1,12 @@
+/*global requirejs */
 var tests = [];
 for (var file in window.__karma__.files) {
   if (window.__karma__.files.hasOwnProperty(file)) {
-    if (/\/base\/test\/spec/.test(file)) {
+    if (/\/base\/tests\/spec/.test(file)) {
+      tests.push(file);
+    }
+
+    if (/\/base\/tests\/fixtures/.test(file)) {
       tests.push(file);
     }
   }

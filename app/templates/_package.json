@@ -16,6 +16,7 @@
   "devDependencies": {
     "bower": "1.0.0",
     "express": "~3.4.7",
+    "portfinder": "~0.2.1",
     "jshint": "~2.5.0",
     "jsdoc": "git://github.com/jsdoc3/jsdoc.git",
     "less-middleware": "*",
