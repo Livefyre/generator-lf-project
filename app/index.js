@@ -46,7 +46,6 @@ LfProjectGenerator.prototype.app = function app() {
   this.mkdir('bin');
   this.template('_server.js', 'bin/server.js');
 
-  this.mkdir('sample');
 
   this.mkdir('dev');
   this.mkdir('dev/css');
@@ -58,9 +57,12 @@ LfProjectGenerator.prototype.srcFiles = function srcFiles() {
   this.mkdir('src/images');
   this.mkdir('src/js');
   this.mkdir('src/less');
+  this.mkdir('src/templates');
+
   this.copy('main.less', 'src/less/main.less');
   this.copy('mixins.less', 'src/less/mixins.less');
-  this.mkdir('src/templates');
+
+  this.copy('polyfill.js', 'src/js/polyfill.js');
 };
 
 LfProjectGenerator.prototype.projectfiles = function projectfiles() {
@@ -79,5 +81,17 @@ LfProjectGenerator.prototype.testFiles = function testFiles() {
   this.mkdir('tests/spec');
 
   this.copy('tests-main.js', 'tests/tests-main.js');
-  this.template('_test.html', 'sample/test.html');
+};
+
+LfProjectGenerator.prototype.nlsFiles = function nlsFiles() {
+  this.mkdir('nls');
+
+  this.copy('root.js', 'nls/root.js');
+  this.copy('i18n.js', 'nls/i18n.js');
+};
+
+LfProjectGenerator.prototype.sampleFiles = function sampleFiles() {
+  this.mkdir('sample');
+  this.template('_test.html', 'sample/sample.html');
+  this.copy('main.js', 'sample/main.js');
 };
