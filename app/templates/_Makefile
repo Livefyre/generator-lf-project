@@ -23,6 +23,9 @@ package: build
 run: build
 	npm start
 
+lint: build
+	./node_modules/jshint/bin/jshint src/js
+
 debug: build
 	$(MAKE) -j 2 _debug
 

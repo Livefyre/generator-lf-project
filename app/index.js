@@ -44,7 +44,7 @@ LfProjectGenerator.prototype.askFor = function askFor() {
 LfProjectGenerator.prototype.app = function app() {
   this.copy('_MakeFile', 'Makefile');
   this.mkdir('bin');
-  this.copy('server.js', 'bin/server.js');
+  this.template('server.js', 'bin/server.js');
 
   this.mkdir('sample');
 
@@ -79,6 +79,5 @@ LfProjectGenerator.prototype.testFiles = function testFiles() {
   this.mkdir('tests/spec');
 
   this.copy('tests-main.js', 'tests/tests-main.js');
-  this.copy('runner.html', 'tests/runner.html');
   this.template('_test.html', 'sample/test.html');
 };
