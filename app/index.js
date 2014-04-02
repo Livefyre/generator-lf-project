@@ -59,10 +59,12 @@ LfProjectGenerator.prototype.srcFiles = function srcFiles() {
   this.mkdir('src/less');
   this.mkdir('src/templates');
 
-  this.copy('main.less', 'src/less/main.less');
+  this.copy('_main.less', 'src/less/main.less');
   this.copy('mixins.less', 'src/less/mixins.less');
+  this.copy('variables.less', 'src/less/variables.less');
 
   this.copy('_main-view.js', 'src/js/main-view.js');
+  this.copy('helloworld.handlebars', 'src/templates/helloworld.handlebars');
   this.copy('polyfill.js', 'src/js/polyfill.js');
 };
 

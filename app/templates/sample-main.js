@@ -21,4 +21,5 @@ require([
   var main = new MainView({
     el: $('#content')
   });
+  main.render();
 });
