@@ -4,6 +4,7 @@ all: build
 
 build: node_modules
 	chmod a+x bin/server.js
+	chmod a+x bin/build.sh
 
 # if package.json changes, install
 node_modules: package.json
@@ -20,6 +21,7 @@ clean:
 	rm -rf node_modules
 
 package: build
+	./bin/build.sh
 
 run: build
 	bin/server.js

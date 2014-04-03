@@ -100,3 +100,9 @@ LfProjectGenerator.prototype.sampleFiles = function sampleFiles() {
   this.template('_sample.html', 'sample/sample.html');
   this.copy('sample-main.js', 'sample/sample-main.js');
 };
+
+LfProjectGenerator.prototype.package = function nlsFiles() {
+  this.copy('r.js', 'r.js');
+  this.copy('_build-config.js', 'build-config.js');
+  this.copy('build.sh', 'bin/build.sh');
+};

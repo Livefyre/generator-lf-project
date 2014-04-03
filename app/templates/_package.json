@@ -19,6 +19,7 @@
     "portfinder": "~0.2.1",
     "jshint": "~2.5.0",
     "jsdoc": "git://github.com/jsdoc3/jsdoc.git",
+    "less": "~1.5.0",
     "less-middleware": "*",
     "mocha": "*",
     "mocha-phantomjs": "~3",
