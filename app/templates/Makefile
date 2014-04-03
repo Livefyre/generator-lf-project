@@ -11,10 +11,10 @@ node_modules: package.json
 	touch $@
 
 test: build
-	npm test
+	./node_modules/karma/bin/karma start karma.conf.js --singleRun=true
 
 testw: build
-	npm run testw
+	./node_modules/karma/bin/karma start karma.conf.js
 
 clean:
 	rm -rf node_modules

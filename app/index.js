@@ -84,6 +84,8 @@ LfProjectGenerator.prototype.testFiles = function testFiles() {
   this.mkdir('tests/spec');
 
   this.copy('tests-main.js', 'tests/tests-main.js');
+  this.copy('karma.conf.js', 'karma.conf.js');
+  this.copy('helloSpec.js', 'tests/spec/helloSpec.js');
 };
 
 LfProjectGenerator.prototype.nlsFiles = function nlsFiles() {

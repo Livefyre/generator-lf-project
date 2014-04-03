@@ -38,9 +38,6 @@
   },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
-    "start": "./bin/server.js",
-    "test": "./node_modules/karma/bin/karma start tools/karma.conf.js --singleRun=true",
-    "testw": "./node_modules/karma/bin/karma start tools/karma.conf.js",
-    "lint": "./node_modules/jshint/bin/jshint src/js; echo"
+    "start": "./bin/server.js"
   }
 }
