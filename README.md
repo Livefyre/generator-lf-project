@@ -38,6 +38,23 @@ $ cd myproject
 $ yo lf-project
 ```
 
+```
+$ yo lf-project
+
+     _-----_
+    |       |
+    |--(o)--|   .--------------------------.
+   `---------´  |    Welcome to Yeoman,    |
+    ( _´U`_ )   |   ladies and gentlemen!  |
+    /___A___\   '__________________________'
+     |  ~  |
+   __'.___.'__
+ ´   `  |° ´ Y `
+
+[?] What is the project name? {{{__}}}
+[?] Describe the project: {{{__}}}
+```
+
 ### Getting To Know Yeoman
 
 Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.

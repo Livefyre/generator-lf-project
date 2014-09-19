@@ -12,7 +12,6 @@
     "backbone": "1.1.1",
     "less": "1.5.0",
     "livefyre-bootstrap": "git@github.com:Livefyre/livefyre-bootstrap.git",
-    "collection-manager": "git@github.com:Livefyre/collection-manager.git",
     "require-css": "0.1.2",
     "requirejs-i18n": "2.0.4",
     "requirejs-handlebars": "git@github.com:jfparadis/requirejs-handlebars.git",

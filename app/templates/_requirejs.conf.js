@@ -6,18 +6,14 @@ require.config({
     , backbone: 'lib/backbone/backbone'
     , text: 'lib/requirejs-text/text'
     , i18n: 'lib/requirejs-i18n/i18n'
+    , json: 'lib/requirejs-plugins/src/json'
     , css: 'lib/require-css/css'
     , Handlebars: 'lib/handlebars/handlebars'
     , hbars: 'lib/requirejs-handlebars/hbars'
     , moment: 'lib/moment/moment'
     , 'livefyre-bootstrap': 'lib/livefyre-bootstrap/dist/main'
-  },
-  map: {
-    backbone: {
-      underscore: 'lodash'
-    }
-  },
-  shim: {
+  }
+  , shim: {
     jquery: {
       exports: '$'
     }
@@ -39,5 +35,10 @@ require.config({
   }
   , hbars: {
     extension: '.handlebars'
+  }
+  , map: {
+    '*': {
+      underscore: 'lodash'
+    }
   }
 });

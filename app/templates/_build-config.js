@@ -2,12 +2,12 @@
   mainConfigFile: './requirejs.conf.js'
   , baseUrl: './'
   , name: 'src/js/main-view'
-  , out: 'dist/main.js'
+  , out: 'dist/<%= name %>.js'
   , paths: {
     jquery: 'empty:'
     , lodash: 'empty:'
     , backbone: 'empty:'
-    , i18n: 'empty:'
+    , 'nls/i18n': 'empty:'
     , moment: 'empty:'
     , 'livefyre-bootstrap': 'empty:'
   }
@@ -16,4 +16,5 @@
   , generateSourceMaps: true
   , preserveLicenseComments: false
   , cjsTranslate: true
+  , stubModules: ['text', 'hgn', 'css']
 })
