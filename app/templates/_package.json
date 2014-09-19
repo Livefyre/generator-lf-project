@@ -8,13 +8,11 @@
     "email": "crichards@livefyre.com"
   }],
   "dependencies": {
+  },
+  "devDependencies": {
     "bower": "*",
     "mocha-phantomjs": "3.1.6",
     "phantomjs": "1.9.2-2",
-    "uglify-js": "^2.4.15"
-  },
-  "devDependencies": {
-    "bower": "1.0.0",
     "express": "~3.4.7",
     "portfinder": "~0.2.1",
     "jshint": "~2.5.0",
