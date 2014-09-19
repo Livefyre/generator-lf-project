@@ -3,15 +3,15 @@
   "description": "<%= desc %>",
   "version": "0.0.0",
   "author": "Livefyre <support@livefyre.com>",
-  "contributors": [
-      { "name": "Chris Richards",
-	"email": "crichards@livefyre.com"
-      }
-  ],
+  "contributors": [{
+    "name": "Chris Richards",
+    "email": "crichards@livefyre.com"
+  }],
   "dependencies": {
     "bower": "*",
     "mocha-phantomjs": "3.1.6",
-    "phantomjs": "1.9.2-2"
+    "phantomjs": "1.9.2-2",
+    "uglify-js": "^2.4.15"
   },
   "devDependencies": {
     "bower": "1.0.0",
@@ -21,6 +21,7 @@
     "jsdoc": "git://github.com/jsdoc3/jsdoc.git",
     "less": "~1.5.0",
     "less-middleware": "*",
+    "requirejs": "~2.1.11",
     "mocha": "*",
     "mocha-phantomjs": "~3",
     "karma-script-launcher": "~0.1.0",
@@ -31,11 +32,12 @@
     "karma-junit-reporter": "~0.1.0",
     "karma-html2js-preprocessor": "~0.1.0",
     "karma-cajon": "*",
-    "karma": "~0.10.5",
+    "karma": "^0.12.16",
     "karma-mocha": "~0.1.0",
     "karma-chai": "0.0.2",
     "karma-sinon-chai": "~0.1",
-    "karma-coverage": "~0.1"
+    "karma-coverage": "~0.1",
+    "karma-cli": "0.0.4"
   },
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
