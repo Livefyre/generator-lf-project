@@ -8,7 +8,6 @@ require([
   , 'nls/i18n'
   , 'src/js/polyfill'
   , 'css!lib/livefyre-bootstrap/dist/all.css'
-  , 'css!lib/collection-manager/dist/all.css'
   , 'css!dev/css/main.css'
 ], function(
   $
