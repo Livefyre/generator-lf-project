@@ -8,7 +8,7 @@ var Backbone = require('backbone');
 var template = require('hbars!src/templates/helloworld');
 
 module.exports = Backbone.View.extend({
-  className: '<%= name %>'
+  className: '<%= _.slugify(name) %>'
   , template: template
   , events: {
 
@@ -17,22 +17,17 @@ module.exports = Backbone.View.extend({
   , initialize: function(opts) {
     var self = this;
 
-    Backbone.trigger('Studio:Request:Permissions', function(permissions) {
+    Backbone.trigger('Studio:Request:multiple', 'Permissions', 'Network', 'Endpoints', function(permissions, domain, endpoints) {
       self.permissions = {
         domainOwner: permissions.get('domain_owner'),
         domainModerator: permissions.get('domain_moderator')
       };
-    });
 
-    Backbone.trigger('Studio:Request:Network', function(domain) {
       self.domain = domain;
       self.domain.isCustomNetwork = (self.domain.id !== 1);
       self.domain.livefyreHost = self.endpoints.zor;
-    });
 
-    Backbone.trigger('Studio:Request:Endpoints', function(endpoints) {
       self.tokens = endpoints.get('tokens');
-      //TODO: See if studio can pass all endpoints like token
       self.endpoints = {
         admin: endpoints.get('admin'),
         bootstrap: endpoints.get('bootstrap'),

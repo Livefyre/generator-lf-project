@@ -2,7 +2,7 @@
   mainConfigFile: './requirejs.conf.js'
   , baseUrl: './'
   , name: 'src/js/main-view'
-  , out: 'dist/<%= name %>.js'
+  , out: 'dist/<%= _.slugify(name) %>.js'
   , paths: {
     jquery: 'empty:'
     , lodash: 'empty:'
