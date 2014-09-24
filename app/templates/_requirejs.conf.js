@@ -26,9 +26,6 @@ require.config({
     , 'livefyre-bootstrap': {
       deps: ['jquery']
     }
-    , Handlebars: {
-      exports: 'Handlebars'
-    }
     , hbars: {
       deps: ['i18n', 'Handlebars']
     }
