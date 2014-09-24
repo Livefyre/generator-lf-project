@@ -12,7 +12,7 @@
     , moment: 'empty:'
     , 'livefyre-bootstrap': 'empty:'
   }
-  , inlineText: false
+  , inlineText: true
   , optimize: 'none'//, optimize: 'uglify2'
   , generateSourceMaps: true
   , preserveLicenseComments: false

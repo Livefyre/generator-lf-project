@@ -36,8 +36,6 @@ module.exports = Backbone.View.extend({
       };
 
       self.domain = domain;
-      self.domain.isCustomNetwork = (self.domain.id !== 1);
-      self.domain.livefyreHost = self.endpoints.zor;
     });
 
     console.log('Everything looks good!');
