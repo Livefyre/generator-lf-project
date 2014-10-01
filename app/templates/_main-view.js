@@ -23,6 +23,9 @@ module.exports = Backbone.View.extend({
         domainModerator: permissions.get('domain_moderator')
       };
 
+      self.domain = domain;
+      self.domain.isCustomNetwork = (self.domain.id !== 1);
+
       self.tokens = endpoints.get('tokens');
       self.endpoints = {
         admin: endpoints.get('admin'),
@@ -34,8 +37,6 @@ module.exports = Backbone.View.extend({
         environment: endpoints.get('environment'),
         socialproxy: endpoints.get('socialproxy')
       };
-
-      self.domain = domain;
     });
 
     console.log('Everything looks good!');
