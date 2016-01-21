@@ -11,7 +11,7 @@
     "lodash": "2.4.1",
     "backbone": "1.1.1",
     "less": "1.7.5",
-    "livefyre-bootstrap": "git@github.com:Livefyre/livefyre-bootstrap.git",
+    "livefyre-bootstrap": "git@github.com:Livefyre/livefyre-bootstrap.git#v1.4.9",
     "require-css": "0.1.2",
     "requirejs-i18n": "2.0.4",
     "requirejs-handlebars": "git@github.com:jfparadis/requirejs-handlebars.git",
@@ -28,7 +28,8 @@
     "view": "~1.1",
     "requirejs": "~2.1.5",
     "moment": "~2.6.0",
-    "requirejs-hogan-plugin": "0.3.1"
+    "requirejs-hogan-plugin": "0.3.1",
+    "bootstrap": "3.0.3"
   }
 }
 
